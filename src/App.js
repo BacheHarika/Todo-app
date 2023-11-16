@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import './App.css'
+import {AiFillHeart} from "react-icons/ai"
 function App ()  {
   let [todoInput,updateInput] =useState("test")
   let [todoList,updatetodos] =useState(
@@ -66,6 +67,8 @@ updatetodos(updatedTodos)
               return(
                 <li className='list-group-items'>
                   <p>{todo.task}</p>
+                  <AiFillHeart/>
+                  <p>Love You Bondam</p>
                   <button onClick={()=>
                   deleteTodo(todo.id)
                   } className='btn'>❌</button>
